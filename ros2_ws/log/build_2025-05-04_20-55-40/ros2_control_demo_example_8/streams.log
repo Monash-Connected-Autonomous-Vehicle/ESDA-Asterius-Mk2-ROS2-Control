@@ -1,0 +1,78 @@
+[0.031s] Invoking command in '/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_sphere_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_environment_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_doosan_pkg:/opt/ros/humble /usr/bin/cmake /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_8 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8
+[0.086s] -- The CXX compiler identification is GNU 11.4.0
+[0.092s] -- Detecting CXX compiler ABI info
+[0.153s] -- Detecting CXX compiler ABI info - done
+[0.160s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.161s] -- Detecting CXX compile features
+[0.161s] -- Detecting CXX compile features - done
+[0.166s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.316s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.370s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.389s] -- Found hardware_interface: 2.50.0 (/opt/ros/humble/share/hardware_interface/cmake)
+[0.417s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.420s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.426s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.435s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.446s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.588s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.591s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.615s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.649s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.652s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.663s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.665s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.673s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.681s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.688s] -- Looking for C++ include pthread.h
+[0.778s] -- Looking for C++ include pthread.h - found
+[0.778s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.864s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.865s] -- Found Threads: TRUE  
+[0.903s] -- Found transmission_interface: 2.50.0 (/opt/ros/humble/share/transmission_interface/cmake)
+[0.917s] -- Found ament_cmake_pytest: 1.3.11 (/opt/ros/humble/share/ament_cmake_pytest/cmake)
+[1.710s] -- Configuring done
+[1.725s] -- Generating done
+[1.729s] -- Build files have been written to: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8
+[1.739s] Invoked command in '/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_sphere_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_environment_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_doosan_pkg:/opt/ros/humble /usr/bin/cmake /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_8 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8
+[1.739s] Invoking command in '/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_sphere_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_environment_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_doosan_pkg:/opt/ros/humble /usr/bin/cmake --build /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8 -- -j20 -l20
+[1.772s] [ 50%] [32mBuilding CXX object CMakeFiles/ros2_control_demo_example_8.dir/hardware/rrbot_transmissions_system_position_only.cpp.o[0m
+[3.576s] [100%] [32m[1mLinking CXX shared library libros2_control_demo_example_8.so[0m
+[3.815s] [100%] Built target ros2_control_demo_example_8
+[3.829s] Invoked command in '/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_sphere_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_environment_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_doosan_pkg:/opt/ros/humble /usr/bin/cmake --build /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8 -- -j20 -l20
+[3.830s] Invoking command in '/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_sphere_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_environment_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_doosan_pkg:/opt/ros/humble /usr/bin/cmake --install /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8
+[5.412s] -- Install configuration: ""
+[5.412s] -- Execute custom install script
+[5.412s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8//ros2_control_demo_example_8.xml
+[5.412s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/include/ros2_control_demo_example_8/ros2_control_demo_example_8/rrbot_transmissions_system_position_only.hpp
+[5.412s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/launch/view_robot.launch.py
+[5.412s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/ros2_control/rrbot_transmissions_system_position_only.ros2_control.xacro
+[5.412s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/urdf/rrbot_transmissions_system_position_only.urdf.xacro
+[5.412s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/launch/rrbot_transmissions_system_position_only.launch.py
+[5.412s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/launch/test_forward_position_controller.launch.py
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/config/rrbot_controllers.yaml
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/config/rrbot_forward_position_publisher.yaml
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/environment/library_path.sh
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/environment/library_path.dsv
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ament_index/resource_index/package_run_dependencies/ros2_control_demo_example_8
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ament_index/resource_index/parent_prefix_path/ros2_control_demo_example_8
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/environment/ament_prefix_path.sh
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/environment/ament_prefix_path.dsv
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/environment/path.sh
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/environment/path.dsv
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/local_setup.bash
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/local_setup.sh
+[5.413s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/local_setup.zsh
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/local_setup.dsv
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/package.dsv
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ament_index/resource_index/packages/ros2_control_demo_example_8
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/ros2_control_demo_example_8
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/cmake/ament_cmake_export_targets-extras.cmake
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/cmake/ros2_control_demo_example_8Config.cmake
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/cmake/ros2_control_demo_example_8Config-version.cmake
+[5.414s] -- Symlinking: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/package.xml
+[5.414s] -- Installing: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/lib/libros2_control_demo_example_8.so
+[5.414s] -- Set runtime path of "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/lib/libros2_control_demo_example_8.so" to ""
+[5.414s] -- Installing: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/cmake/export_ros2_control_demo_example_8Export.cmake
+[5.414s] -- Installing: /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/ros2_control_demo_example_8/share/ros2_control_demo_example_8/cmake/export_ros2_control_demo_example_8Export-noconfig.cmake
+[5.417s] Invoked command in '/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_sphere_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_environment_pkg:/home/samuel/Desktop/ITS-Robot-Arm/ros2_ws/install/my_doosan_pkg:/opt/ros/humble /usr/bin/cmake --install /home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_8

@@ -1,0 +1,1 @@
+/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_7/bringup/launch/send_trajectory.launch.py

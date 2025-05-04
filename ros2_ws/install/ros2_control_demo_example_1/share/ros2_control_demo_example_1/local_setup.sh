@@ -1,0 +1,1 @@
+/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_1/ament_cmake_environment_hooks/local_setup.sh
