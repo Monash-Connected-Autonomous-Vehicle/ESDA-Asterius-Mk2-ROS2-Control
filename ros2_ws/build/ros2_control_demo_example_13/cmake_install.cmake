@@ -43,7 +43,77 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13" TYPE DIRECTORY FILES
+    "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_13/description/ros2_control"
+    "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_13/description/urdf"
+    "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_13/description/rviz"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13" TYPE DIRECTORY FILES
+    "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_13/bringup/launch"
+    "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_13/bringup/config"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ros2_control_demo_example_13")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ros2_control_demo_example_13")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13/environment" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13/environment" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_index/share/ament_index/resource_index/packages/ros2_control_demo_example_13")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13/cmake" TYPE FILE FILES
+    "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_core/ros2_control_demo_example_13Config.cmake"
+    "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/ros2_control_demo_example_13/ament_cmake_core/ros2_control_demo_example_13Config-version.cmake"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros2_control_demo_example_13" TYPE FILE FILES "/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_13/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

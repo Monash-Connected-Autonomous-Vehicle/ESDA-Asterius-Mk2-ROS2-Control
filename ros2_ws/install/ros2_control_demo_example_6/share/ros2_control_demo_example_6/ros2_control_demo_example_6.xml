@@ -1,1 +1,9 @@
-/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_6/ros2_control_demo_example_6.xml
+<library path="ros2_control_demo_example_6">
+  <class name="ros2_control_demo_example_6/RRBotModularJoint"
+         type="ros2_control_demo_example_6::RRBotModularJoint"
+         base_class_type="hardware_interface::ActuatorInterface">
+    <description>
+      The ros2_control robot with 2 separate actuators which can be controlled by 2 different endpoints.
+    </description>
+  </class>
+</library>
