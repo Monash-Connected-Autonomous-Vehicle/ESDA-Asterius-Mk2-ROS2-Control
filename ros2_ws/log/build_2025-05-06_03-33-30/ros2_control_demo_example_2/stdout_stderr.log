@@ -1,0 +1,10 @@
+[ 50%] Built target ros2_control_demo_example_2
+[ 75%] [32mBuilding CXX object CMakeFiles/mavlink_subscriber_node.dir/hardware/mavlink_subscriber_node.cpp.o[0m
+In file included from [01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/mavlink_subscriber_node.cpp:10[m[K:
+[01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/ros2_control_demo_example_2/mavlink_subscriber_node.hpp:6:10:[m[K [01;31m[Kfatal error: [m[Kmavlink.h: No such file or directory
+    6 | #include [01;31m[K"mavlink.h"[m[K  // Include MAVLink header for message definitions
+      |          [01;31m[K^~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/mavlink_subscriber_node.dir/build.make:76: CMakeFiles/mavlink_subscriber_node.dir/hardware/mavlink_subscriber_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/mavlink_subscriber_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,28 @@
+In file included from [01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/libmavconn/interface.hpp:41[m[K,
+                 from [01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/mavlink_subscriber_node.cpp:10[m[K:
+[01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/libmavconn/mavlink_dialect.hpp:17:2:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K@[m[K’ in program
+   17 |  [01;31m[K@[m[K#
+      |  [01;31m[K^[m[K
+[01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/libmavconn/mavlink_dialect.hpp:17:3:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+   17 |  @[01;31m[K#[m[K
+      |   [01;31m[K^[m[K
+[01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/libmavconn/mavlink_dialect.hpp:18:2:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K@[m[K’ in program
+   18 |  [01;31m[K@[m[K# EmPy template of dialect include file
+      |  [01;31m[K^[m[K
+[01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/libmavconn/mavlink_dialect.hpp:18:3:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+   18 |  @[01;31m[K#[m[K EmPy template of dialect include file
+      |   [01;31m[K^[m[K
+[01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/libmavconn/mavlink_dialect.hpp:19:2:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K@[m[K’ in program
+   19 |  [01;31m[K@[m[K#
+      |  [01;31m[K^[m[K
+[01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/libmavconn/mavlink_dialect.hpp:19:3:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+   19 |  @[01;31m[K#[m[K
+      |   [01;31m[K^[m[K
+[01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/include/libmavconn/mavlink_dialect.hpp:31:11:[m[K [01;31m[Kfatal error: [m[Kmavlink/config.h: No such file or directory
+   31 |  #include [01;31m[K<mavlink/config.h>[m[K
+      |           [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/mavlink_subscriber_node.dir/build.make:76: CMakeFiles/mavlink_subscriber_node.dir/hardware/mavlink_subscriber_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/mavlink_subscriber_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2
