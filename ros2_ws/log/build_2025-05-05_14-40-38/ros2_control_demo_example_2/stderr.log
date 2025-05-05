@@ -1,0 +1,9 @@
+In file included from [01m[K/opt/ros/humble/include/mavros/mavros_router.hpp:38[m[K,
+                 from [01m[K/home/samuel/Desktop/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/ros2_control_demos/example_2/hardware/diffbot_system.cpp:32[m[K:
+[01m[K/opt/ros/humble/include/diagnostic_updater/diagnostic_updater.hpp:46:10:[m[K [01;31m[Kfatal error: [m[Kdiagnostic_msgs/msg/diagnostic_array.hpp: No such file or directory
+   46 | #include [01;31m[K"diagnostic_msgs/msg/diagnostic_array.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/ros2_control_demo_example_2.dir/build.make:76: CMakeFiles/ros2_control_demo_example_2.dir/hardware/diffbot_system.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/ros2_control_demo_example_2.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
