@@ -1,0 +1,7 @@
+# Ignore install and build directories in the root of your repository
+install
+build
+log
+
+# Ignore all files in the dist-packages directory
+/install/*/dist-packages/

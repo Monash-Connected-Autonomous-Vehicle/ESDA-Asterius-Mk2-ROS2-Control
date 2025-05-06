@@ -1,3 +1,6 @@
 [submodule "ros2_ws/src/ros2_control_demos"]
 	path = ros2_ws/src/ros2_control_demos
 	url = https://github.com/Credit3/ros2_control_demos.git
+[submodule "ros2_ws/src/mavros"]
+    path = ros2_ws/src/mavros
+    url = https://github.com/Credit3/mavros.git
