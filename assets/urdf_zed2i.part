@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "aa064596d93db1f39259b834",
+    "documentMicroversion": "5f84162d5c123b8a1188bcb8",
+    "documentVersion": "ba365fa6da5cf79b675c293c",
+    "elementId": "203b0ea82db11a8f1372f070",
+    "fullConfiguration": "default",
+    "id": "M5IbE1ZrVrMTxtqq0",
+    "isStandardContent": false,
+    "name": "URDF_ZED2i <1>",
+    "partId": "JHD",
+    "suppressed": false,
+    "type": "Part"
+}

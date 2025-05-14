@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "aa064596d93db1f39259b834",
+    "documentMicroversion": "fa6f967207b94af5e909ef3f",
+    "documentVersion": "ad0864ce0b5bb881bee63df0",
+    "elementId": "05bb5a78e9bdf80b140c0a91",
+    "fullConfiguration": "default",
+    "id": "MpLc/r9LGPy497ts1",
+    "isStandardContent": false,
+    "name": "URDF_LIDAR <1>",
+    "partId": "JHD",
+    "suppressed": false,
+    "type": "Part"
+}

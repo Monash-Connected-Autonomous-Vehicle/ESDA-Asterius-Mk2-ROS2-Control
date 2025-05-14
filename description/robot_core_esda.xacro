@@ -1,0 +1,776 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <xacro:include filename="inertial_macros.xacro"/>
+
+    <material name="white">
+        <color rgba="1 1 1 1" />
+    </material>
+
+    <material name="orange">
+        <color rgba="1 0.3 0.1 1"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.2 0.2 1 1"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+    <!-- BASE LINK -->
+
+    <link name="base_link">
+
+    </link>
+
+    <!-- BASE_FOOTPRINT LINK -->
+
+    <joint name="base_footprint_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="base_footprint">
+    </link>
+
+
+    <!-- CHASSIS LINK -->
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="-0.08353 0 0.0137"/>    <!-- NOTE: the origin is the coordinates of parent link from child link perspective--> 
+    </joint>
+
+    <link name="chassis">
+        
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="100"/>
+            <inertia ixx="10" ixy="10" ixz="10" iyy="10" iyz="10" izz="10"/>
+        </inertial>
+        
+        <!-- Part fcid_welded_body__configuration_ali_2mm -->
+        <visual>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/> <!-- NOTE: origin here is the coordinates of the link from the mesh perspective-->
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_welded_body__configuration_ali_2mm.stl"/>
+            </geometry>
+            <material name="fcid_welded_body__configuration_ali_2mm_material">
+                <color rgba="0.647059 0.647059 0.647059 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_welded_body__configuration_ali_2mm.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_gps_fin -->
+        <visual>
+            <origin xyz="-0.396667 0.007603 0.150000" rpy="-0.017180 0.000000 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_gps_fin.stl"/>
+            </geometry>
+            <material name="fcid_gps_fin_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.396667 0.007603 0.150000" rpy="-0.017180 0.000000 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_gps_fin.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_lidar_fin -->
+        <visual>
+            <origin xyz="-0.402550 0.000829 0.149771" rpy="0.000000 0.000000 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_lidar_fin.stl"/>
+            </geometry>
+            <material name="fcid_lidar_fin_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.402550 0.000829 0.149771" rpy="0.000000 0.000000 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_lidar_fin.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_lid__configuration_ali_2mm -->
+        <visual>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_lid__configuration_ali_2mm.stl"/>
+            </geometry>
+            <material name="fcid_lid__configuration_ali_2mm_material">
+                <color rgba="0.647059 0.647059 0.647059 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_lid__configuration_ali_2mm.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_body_right__configuration_ali_2mm -->
+        <visual>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_body_right__configuration_ali_2mm.stl"/>
+            </geometry>
+            <material name="fcid_body_right__configuration_ali_2mm_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_body_right__configuration_ali_2mm.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_divider_mount__configuration_ali_2mm -->
+        <visual>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_divider_mount__configuration_ali_2mm.stl"/>
+            </geometry>
+            <material name="fcid_divider_mount__configuration_ali_2mm_material">
+                <color rgba="0.647059 0.647059 0.647059 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_divider_mount__configuration_ali_2mm.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_camera_mount -->
+        <visual>
+            <origin xyz="-0.384 0.004445 0.1436" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_camera_mount.stl"/>
+            </geometry>
+            <material name="fcid_camera_mount_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.384 0.004445 0.1436" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_camera_mount.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_rear__configuration_ali_2mm -->
+        <visual>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_rear__configuration_ali_2mm.stl"/>
+            </geometry>
+            <material name="fcid_rear__configuration_ali_2mm_material">
+                <color rgba="0.647059 0.647059 0.647059 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_rear__configuration_ali_2mm.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_divider__configuration_ali_2mm -->
+        <visual>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_divider__configuration_ali_2mm.stl"/>
+            </geometry>
+            <material name="fcid_divider__configuration_ali_2mm_material">
+                <color rgba="0.647059 0.647059 0.647059 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_divider__configuration_ali_2mm.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part fcid_body_left__configuration_ali_2mm -->
+        <visual>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_body_left__configuration_ali_2mm.stl"/>
+            </geometry>
+            <material name="fcid_body_left__configuration_ali_2mm_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.4005 0 0.15" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/fcid_body_left__configuration_ali_2mm.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part arm_rhs -->
+        <visual>
+            <origin xyz="-0.0663 -0.201 -0.0136" rpy="0 ${pi*2} -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/arm_rhs.stl"/>
+            </geometry>
+            <material name="arm_rhs_material">
+                <color rgba="0.8 0.8 0.8 1.0"/>
+            </material>
+        </visual>
+        <collision>
+             <origin xyz="-0.0663 -0.201 -0.0136" rpy="0 ${pi*2} -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/arm_rhs.stl"/>
+            </geometry>
+        </collision>
+        
+        <!-- Part drve_arm_bracket -->
+        <visual>
+            <origin xyz="0.0835 -0.2 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_arm_bracket.stl"/>
+            </geometry>
+            <material name="drve_arm_bracket_material">
+                <color rgba="0.8 0.8 0.8 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 -0.2 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_arm_bracket.stl"/>
+            </geometry>
+        </collision>"
+
+        	<!-- Part drve_bottom_plate -->
+        <visual>
+            <origin xyz="0.0835 -0.2203 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_bottom_plate.stl"/>
+            </geometry>
+            <material name="drve_bottom_plate_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 -0.2203 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_bottom_plate.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part drve_middle -->
+        <visual>
+            <origin xyz="0.0835 -0.2203 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_middle.stl"/>
+            </geometry>
+            <material name="drve_middle_material">
+                <color rgba="0.501961 0.501961 0.501961 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 -0.2203 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_middle.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part drve_top_plate -->
+        <visual>
+            <origin xyz="0.0835 -0.2203 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_top_plate.stl"/>
+            </geometry>
+            <material name="drve_top_plate_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 -0.2203 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_top_plate.stl"/>
+            </geometry>
+        </collision>
+        
+        <!-- Part bort_motor -->
+        <visual>
+            <origin xyz="0.0835 -0.2203 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_motor.stl"/>
+            </geometry>
+            <material name="bort_motor_material">
+                <color rgba="0.654902 0.823529 0.576471 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 -0.2203 -0.01368" rpy="-1.319047 ${pi} ${3*pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_motor.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part arm_endcap -->
+        <visual>
+            <origin xyz="-0.0663 -0.201 -0.0136" rpy="0 ${pi*2} -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/arm_endcap.stl"/>
+            </geometry>
+            <material name="arm_endcap_material">
+                <color rgba="0.121569 0.121569 0.121569 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.0663 -0.201 -0.0136" rpy="0 ${pi*2} -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/arm_endcap.stl"/>
+            </geometry>
+        </collision>
+       
+
+        <!-- Part arm_rhs_2 -->
+        <visual>
+            <origin xyz="-0.0367 0.201 0.07287" rpy="0.64 ${pi} -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/arm_rhs.stl"/>
+            </geometry>
+            <material name="arm_rhs_2_material">
+                <color rgba="0.8 0.8 0.8 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.0367 0.201 0.07287" rpy="0.64 ${pi} -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/arm_rhs.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part drve_arm_bracket_2 -->
+        <visual>
+            <origin xyz="0.0835 0.2 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_arm_bracket.stl"/>
+            </geometry>
+            <material name="drve_arm_bracket_2_material">
+                <color rgba="0.8 0.8 0.8 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 0.2 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_arm_bracket.stl"/>
+            </geometry>
+        </collision>
+
+
+        <!-- Part bort_motor_2 -->
+        <visual>
+            <origin xyz="0.0835 0.2203 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_motor.stl"/>
+            </geometry>
+            <material name="bort_motor_2_material">
+                <color rgba="0.654902 0.823529 0.576471 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 0.2203 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_motor.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part drve_bottom_plate_2 -->
+        <visual>
+            <origin xyz="0.0835 0.2203 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_bottom_plate.stl"/>
+            </geometry>
+            <material name="drve_bottom_plate_2_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 0.2203 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_bottom_plate.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part drve_top_plate_2 -->
+        <visual>
+            <origin xyz="0.0835 0.2203 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_top_plate.stl"/>
+            </geometry>
+            <material name="drve_top_plate_2_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 0.2203 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_top_plate.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part drve_middle_2 -->
+        <visual>
+            <origin xyz="0.0835 0.2203 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_middle.stl"/>
+            </geometry>
+            <material name="drve_middle_2_material">
+                <color rgba="0.501961 0.501961 0.501961 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0835 0.2203 -0.01368" rpy="-1.319047 ${pi} ${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_middle.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part arm_endcap_2 -->
+        <visual>
+            <origin xyz="-0.0367 0.201 0.07287" rpy="0.64 ${pi} -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/arm_endcap.stl"/>
+            </geometry>
+            <material name="arm_endcap_2_material">
+                <color rgba="0.121569 0.121569 0.121569 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.0367 0.201 0.07287" rpy="0.64 ${pi} -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/arm_endcap.stl"/>
+            </geometry>
+        </collision>
+
+    </link>
+
+    <gazebo reference="chassis">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- LEFT WHEEL LINK -->
+
+    <!-- Joint from urdf_rigid_v2 to left_wheel --> 
+    <joint name="left_wheel_joint" type="continuous">
+        <parent link="base_link"/> 
+        <child link="left_wheel"/>
+        <origin xyz="0 0.313 0" rpy="-${pi/2} 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <!-- Link left_wheel -->
+    <link name="left_wheel">  
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="2.46468"/>
+            <inertia ixx="0.0210846" ixy="9.45889e-10" ixz="2.03772e-09" iyy="0.0132215" iyz="5.21376e-10" izz="0.0132215"/>
+        </inertial>
+
+        <!-- Part drve_output_carrier -->
+        <visual>
+            <origin xyz="0 0 -0.09258" rpy="0 ${pi/2} 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_output_carrier.stl"/>
+            </geometry>
+            <material name="drve_output_carrier_material">
+                <color rgba="0.231373 0.380392 0.705882 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.09258" rpy="0 ${pi/2} 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_output_carrier.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part bort_rim -->
+        <visual>
+            <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_rim.stl"/> 
+            </geometry>
+            <material name="bort_rim_material">
+                <color rgba="0.372549 0.368627 0.368627 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_rim.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part bort_tire -->
+        <visual>
+            <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_tire.stl"/>
+            </geometry>
+            <material name="bort_tire_material">
+                <color rgba="0.141176 0.141176 0.141176 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_tire.stl"/>
+            </geometry>
+        </collision>
+
+    </link>
+    
+    <gazebo reference="left_wheel">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <!-- RIGHT WHEEL LINK -->
+
+    <!-- Joint from urdf_rigid_v2 to right_wheel -->
+    <joint name="right_wheel_joint" type="continuous">
+        <parent link="base_link"/> 
+        <child link="right_wheel"/>
+        <origin xyz="0 -0.313 0" rpy="${pi/2} 0 0"/>
+        <axis xyz="0 0 -1"/>
+    </joint>
+
+    <!-- Link right_wheel -->
+    <link name="right_wheel">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="2.46468"/>
+            <inertia ixx="0.0132215" ixy="4.03722e-10" ixz="1.94557e-09" iyy="0.0132215" iyz="1.12328e-09" izz="0.0210846"/>
+        </inertial>
+
+        <!-- Part drve_output_carrier_2 -->
+        <visual>
+            <origin xyz="0 0 -0.09258" rpy="0 ${pi/2} 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_output_carrier.stl"/>
+            </geometry>
+            <material name="drve_output_carrier_2_material">
+                <color rgba="0.231373 0.380392 0.705882 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.09258" rpy="0 ${pi/2} 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/drve_output_carrier.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part bort_rim_2 -->
+        <visual>
+            <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_rim.stl"/>
+            </geometry>
+            <material name="bort_rim_2_material">
+                <color rgba="0.372549 0.368627 0.368627 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_rim.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part bort_tire_2 -->
+        <visual>
+            <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_tire.stl"/>
+            </geometry>
+            <material name="bort_tire_2_material">
+                <color rgba="0.141176 0.141176 0.141176 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="-${pi/2} 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bort_tire.stl"/>
+            </geometry>
+        </collision>
+        
+    </link>
+
+    <gazebo reference="right_wheel">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <!-- CASTER WHEEL LINK -->
+
+    <!-- Joint from urdf_rigid_v2 to urdf_cstr_assembly_v2 -->
+    <joint name="caster" type="continuous">
+        <parent link="chassis"/>
+        <child link="urdf_cstr_assembly_v2"/>
+        <origin xyz="-0.58960275 0 0.06" rpy="0 0 0"/> 
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <!-- Link urdf_cstr_assembly_v2 -->
+    <link name="urdf_cstr_assembly_v2">
+        <inertial>
+            <origin xyz="0 -0.0357066 0" rpy="0 0 0"/>
+            <mass value="0.252085"/>
+            <inertia ixx="0.0014392" ixy="6.87264e-10" ixz="2.53705e-09" iyy="0.000970124" iyz="0.000416745" izz="0.000918439"/>
+        </inertial>
+
+        <!-- Part bearing_spacer -->
+        <visual>
+            <origin xyz="0 0 -0.0066" rpy="0 0 ${pi/6}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bearing_spacer.stl"/>
+            </geometry>
+            <material name="bearing_spacer_material">
+                <color rgba="0.8 0.8 0.8 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.0066" rpy="0 0 ${pi/6}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/bearing_spacer.stl"/>
+            </geometry>
+        </collision>
+        
+        <!-- Part part_1 -->
+        <visual>
+            <origin xyz="-0.015 0 -0.0964377" rpy="0 0 -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/part_1.stl"/>
+            </geometry>
+            <material name="part_1_material">
+                <color rgba="0.647059 0.647059 0.647059 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.015 0 -0.0964377" rpy="0 0 -${pi/2}"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/part_1.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part caster_arm_r = lhs -->
+        <visual>
+            <origin xyz="-0.17791 0.0864 -0.159689" rpy="0 -0.0876147 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/caster_arm_r.stl"/>
+            </geometry>
+            <material name="caster_arm_r_material">
+                <color rgba="0.647059 0.647059 0.647059 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.17791 0.0864 -0.159689" rpy="0 -0.0876147 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/caster_arm_r.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part caster_arm_r_2 = rhs-->
+        <visual>
+            <origin xyz="-0.17791 0.0254 -0.159689" rpy="0 -0.0876147 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/caster_arm_r.stl"/>
+            </geometry>
+            <material name="caster_arm_r_2_material">
+                <color rgba="0.647059 0.647059 0.647059 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.17791 0.0254 -0.159689" rpy="0 -0.0876147 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/caster_arm_r.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <gazebo reference="urdf_cstr_assembly_v2">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- Joint from urdf_cstr_assembly_v2 to urdf_cstr_wheel_assembly__configuration_default -->
+    <joint name="wheelrear_speed" type="continuous">
+        <parent link="urdf_cstr_assembly_v2"/>
+        <child link="urdf_cstr_wheel_assembly__configuration_default"/>
+        <origin xyz="-0.159386 0 -0.142" rpy="${pi/2} 0 0"/>
+        <axis xyz="0 0 -1"/>
+    </joint>
+    
+    <!-- Link urdf_cstr_wheel_assembly__configuration_default -->
+    <link name="urdf_cstr_wheel_assembly__configuration_default">
+        <inertial>
+            <origin xyz="6.26367e-17 -2.28362e-13 0" rpy="0 0 0"/>
+            <mass value="0.45"/>
+            <inertia ixx="0.000707413" ixy="4.40727e-18" ixz="5.04462e-19" iyy="0.000707413" iyz="7.82969e-19" izz="0.00119057"/>
+        </inertial>
+
+        <!-- Part cstr_wheel_rim -->
+        <visual>
+            <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/cstr_wheel_rim.stl"/>
+            </geometry>
+            <material name="cstr_wheel_rim_material">
+                <color rgba="0.0901961 0.0901961 0.0901961 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/cstr_wheel_rim.stl"/>
+            </geometry>
+        </collision>
+
+        <!-- Part cstr_wheel_tyre -->
+        <visual>
+            <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/cstr_wheel_tyre.stl"/>
+            </geometry>
+            <material name="cstr_wheel_tyre_material">
+                <color rgba="0.168627 0.168627 0.168627 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0"/>
+            <geometry>
+                <mesh filename="file://$(find esda_vehicle_control)/assets/cstr_wheel_tyre.stl"/>
+            </geometry>
+        </collision>
+
+    </link>
+
+    <gazebo reference="urdf_cstr_wheel_assembly__configuration_default">
+        <material>Gazebo/Black</material>
+        <mu1 value="0.001"/>
+        <mu2 value="0.001"/>
+    </gazebo>
+
+
+</robot>

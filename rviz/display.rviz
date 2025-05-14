@@ -1,0 +1,7 @@
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/RobotModel      # <‑‑ this is the key line
+      Name: Robot Model
+      Robot Description: robot_description
+  Fixed Frame: base_link

@@ -1,4 +1,0 @@
-[0.006s] Invoking command in '/home/guanyue/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/micro_ros_stmcube': /usr/bin/cmake /home/guanyue/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/micro_ros_stm32cubemx_utils -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/guanyue/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/micro_ros_stmcube
-[0.020s] [0mCMake Error: The source directory "/home/guanyue/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/micro_ros_stm32cubemx_utils" does not appear to contain CMakeLists.txt.
-[0.020s] Specify --help for usage, or press the help button on the CMake GUI.[0m
-[0.022s] Invoked command in '/home/guanyue/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/build/micro_ros_stmcube' returned '1': /usr/bin/cmake /home/guanyue/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/src/micro_ros_stm32cubemx_utils -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/guanyue/ESDA-Asterius-Mk2-ROS2-Control/ros2_ws/install/micro_ros_stmcube
