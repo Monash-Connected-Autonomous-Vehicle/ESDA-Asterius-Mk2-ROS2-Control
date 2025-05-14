@@ -4,6 +4,22 @@
     <xacro:arg name="namespace" default="" />
 
     <xacro:unless value="$(arg sim_mode)">
+    <ros2_control name="fake" type="system" >
+        <hardware>
+            <plugin>fake_components/GenericSystem</plugin>
+        </hardware>
+        <joint name="left_wheel_joint">
+            <command_interface name="velocity" />
+            <state_interface name="position" />
+        </joint>
+        <joint name="right_wheel_joint">
+            <command_interface name="velocity" />
+            <state_interface name="position" />
+        </joint>
+
+    </ros2_control>
+    </xacro:unless>
+    <!--
         <ros2_control name="RealRobot" type="system">
             <hardware>
                 <plugin>diffdrive_arduino/DiffDriveArduino</plugin>
@@ -59,7 +75,6 @@
     </xacro:if>
 
     <gazebo>
-    <!-- Joint state publisher -->
         <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
             <ros>
                 <namespace>$(arg namespace)</namespace>
@@ -68,6 +83,7 @@
             <parameters>$(find esda_vehicle_control)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
         </plugin>
     </gazebo>
+    -->
     
 
 </robot>

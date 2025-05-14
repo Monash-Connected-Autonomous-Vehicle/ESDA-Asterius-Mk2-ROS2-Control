@@ -1,13 +1,16 @@
-/**/controller_manager:
+controller_manager:
   ros__parameters:
     update_rate: 100  # Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
+    
+    esda_diff_drive_controller:
+      type: esda_diff_drive_controller/EsdaDiffDriveController
 
-/**/diff_drive_base_controller:
+esda_diff_drive_controller:
   ros__parameters:
-    type: diff_drive_controller/DiffDriveController
+    type: esda_diff_drive_controller/EsdaDiffDriveController
     left_wheel_names: ["left_wheel_joint"]
     right_wheel_names: ["right_wheel_joint"]
 
