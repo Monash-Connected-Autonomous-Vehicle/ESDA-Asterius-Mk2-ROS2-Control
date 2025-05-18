@@ -54,7 +54,7 @@
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <mass value="100"/>
-            <inertia ixx="10" ixy="10" ixz="10" iyy="10" iyz="10" izz="10"/>
+            <inertia ixx="4.507" ixy="0.047271135" ixz="-0.009138455" iyy="1.732" iyz="-0.551074502" izz="5.113"/>
         </inertial>
         
         <!-- Part fcid_welded_body__configuration_ali_2mm -->
