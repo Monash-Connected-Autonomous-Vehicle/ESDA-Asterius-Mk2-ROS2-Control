@@ -3,6 +3,24 @@
 
     <xacro:include filename="inertial_macros.xacro"/>
 
+    <xacro:property name="chassis_length" value="0.939"/>
+    <xacro:property name="chassis_width" value="0.345"/>
+    <xacro:property name="chassis_height" value="0.405"/>
+    <xacro:property name="chassis_mass" value="45"/>
+    <xacro:property name="wheel_radius" value="0.165"/>
+    <xacro:property name="wheel_thickness" value="0.117"/>
+    <xacro:property name="wheel_mass" value="2.5"/> 
+
+    <xacro:property name="wheel_offset_x" value="0.08353"/>
+    <xacro:property name="wheel_offset_y" value="0.313"/>
+    <xacro:property name="wheel_offset_z" value="-0.0137"/>
+
+    <xacro:property name="caster_wheel_radius" value="0.01"/>
+    <xacro:property name="caster_wheel_mass" value="0.45"/>
+
+    <xacro:property name="caster_wheel_offset_x" value="−0.74898875"/>
+    <xacro:property name="caster_wheel_offset_z" value="−0.082"/>
+
     <material name="white">
         <color rgba="1 1 1 1" />
     </material>
@@ -24,7 +42,6 @@
     </material>
 
     <!-- BASE LINK -->
-
     <link name="base_link">
 
     </link>
@@ -53,7 +70,7 @@
         
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="100"/>
+            <mass value="45"/>
             <inertia ixx="4.507" ixy="0.047271135" ixz="-0.009138455" iyy="1.732" iyz="-0.551074502" izz="5.113"/>
         </inertial>
         
@@ -470,7 +487,7 @@
     </link>
 
     <gazebo reference="chassis">
-        <material>Gazebo/Black</material>
+        <material>Gazebo/Purple</material>
     </gazebo>
 
     <!-- LEFT WHEEL LINK -->
@@ -711,7 +728,7 @@
     </link>
 
     <gazebo reference="urdf_cstr_assembly_v2">
-        <material>Gazebo/Black</material>
+        <material>Gazebo/White</material>
     </gazebo>
 
     <!-- Joint from urdf_cstr_assembly_v2 to urdf_cstr_wheel_assembly__configuration_default -->
